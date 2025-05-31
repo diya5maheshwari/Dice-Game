@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="dice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
+<link
+href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+rel="stylesheet"
+/>
+</head>
+<body>
+    <div class="container">
+        <h1>Refresh Me</h1>
+  
+        <div class="play">
+            <h2>player1</h2>
+            <img src="./dice5.png" alt="">
+        </div>
+        <div class="play">
+            <h2>player2</h2>
+            <img src="./dice1.png" alt="">
+        </div>
+
+    </div>
+    <footer>www 🎲 App Brewery 🎲 com</footer>
+
+
+   <script>
+    //   alert("let's play a game");
+      var randomNumber1= Math.floor(Math.random()* 6)+1;
+      var randomDiceImage="dice"+randomNumber1+".png";
+      var randomeImageSource=randomDiceImage;
+      var image1= document.querySelectorAll("img")[0];
+      image1.setAttribute("src",randomeImageSource);
+
+      var randomNumber2=Math.floor(Math.random()  *6)+1;
+      var randomDiceImage2="dice"+randomNumber2+".png";
+      var randomeImageSource2=randomDiceImage2;
+      document.querySelectorAll("img")[1].setAttribute("src",randomeImageSource2);
+
+      if(randomNumber1>randomNumber2){
+        document.querySelector("h1").innerHTML="player1 is Win !";
+      }
+      else if(randomNumber1<randomNumber2){
+        document.querySelector("h1").innerHTML="player2 is Win !!";
+      }
+      else{
+        document.querySelector("h1").innerHTML="Drow";
+      }
+  
+
+   </script>
+  
+</body>
+</html>
